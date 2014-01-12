@@ -21,6 +21,10 @@ description:  strict Identity monad for writing strict performant code sanely
 -- URL for the project homepage or repository.
 homepage:            https://github.com/cartazio/strict-identity
 
+source-repository head
+  type: git
+  location: http://github.com/cartazio/strict-identity.git
+
 -- The license under which the package is released.
 license:             BSD3
 
