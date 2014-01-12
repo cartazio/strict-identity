@@ -50,6 +50,8 @@ build-type:          Simple
 -- Constraint on the version of Cabal needed to build this package.
 cabal-version:       >=1.10
 
+extra-source-files: changelog.md 
+                    readme.md 
 
 library
   -- Modules exported by the library.
