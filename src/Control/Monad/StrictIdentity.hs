@@ -1,5 +1,5 @@
 {- |
-Module      :  Control.Monad.Strict
+Module      :  Control.Monad.StrictIdentity
 Copyright   :  (c) Carter Schonwald 2013
 License     :  BSD3, see license file
  
@@ -15,7 +15,7 @@ module Control.Monad.StrictIdentity (
     runStrictIdentity)
     where
  
-import Control.Monad
+
 import Control.Monad.Fix 
 import Control.Applicative
 
@@ -90,8 +90,8 @@ instance Monad StrictIdentity where
     {-# INLINE return  #-}
     return !a = StrictIdentity $! a
     {-# INLINE  (>>=) #-}
-    (!m) >>= (!k)  = k $! (runStrictIdentity $! m)    
- 
+    (!m) >>= (!k)  = k $! runStrictIdentity  m    
+ --StrictIdentity m >>= k  =  k $! m
 instance MonadFix StrictIdentity where
     {-# INLINE mfix  #-}
     mfix !f = StrictIdentity $! (fix  (runStrictIdentity . f))    
@@ -99,4 +99,3 @@ instance MonadFix StrictIdentity where
 
 {- | 
 
--}

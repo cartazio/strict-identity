@@ -52,10 +52,10 @@ cabal-version:       >=1.10
 library
   -- Modules exported by the library.
   exposed-modules:     Control.Monad.StrictIdentity
-  
+
   -- Modules included in this library but not exported.
   -- other-modules:       
-  
+  ghc-options: -Wall  
   -- LANGUAGE extensions used by modules in this package.
   other-extensions:    BangPatterns
   
