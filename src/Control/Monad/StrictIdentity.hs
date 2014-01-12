@@ -97,5 +97,5 @@ instance MonadFix StrictIdentity where
     mfix !f = StrictIdentity $! (fix  (runStrictIdentity . f))    
 
 
-{- | 
+
 
