@@ -16,7 +16,7 @@ version:             0.1.0.0
 synopsis:            Strict Identity Monad, handy for writing fast code!
 
 -- A longer description of the package.
--- description:         
+description:  strict Identity monad for writing strict performant code sanely
 
 -- URL for the project homepage or repository.
 homepage:            https://github.com/cartazio/strict-identity
